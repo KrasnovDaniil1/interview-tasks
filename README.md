@@ -16,5 +16,5 @@ strin.charCodeAt() (Выводит кодировку данной строки)
  Напишите программу, создающую строку, содержащую решётку 8х8, в которой линии разделяются символами новой строки. На каждой позиции либо пробел, либо #. В результате должна получиться шахматная доска.
 
 #### Источники
-1) <a href='http://www.itmathrepetitor.ru/zadachi-po-javascript-iz-knigi-vyrazitelnyjj-javascript/' />
-2) <a href='https://medium.com/webbdev/js-2b0820b3788f' />
+1) http://www.itmathrepetitor.ru/zadachi-po-javascript-iz-knigi-vyrazitelnyjj-javascript/
+2) https://medium.com/webbdev/js-2b0820b3788f
