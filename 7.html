@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        display: flex;
+    }
+    h1{
+        margin-left:300px;
+        margin-top:135px;
+        font-size: 50px;
+    }
+    button , input {
+        width: 200px;
+        height: 30px;
+        margin-top: 150px;
+        margin-left: 10px;
+    }
+    h2{
+        height: 30px;
+        margin-left: 200px;
+        font-size: 50px;
+    }
+
+</style>
+<body>
+    <h2 id="h2"></h2>
+    <div>
+        
+        <h1 id="h1">Введите число</h1>
+        <input type="input" id="inp" >
+        <button id="btn" type="button">Начать отсчёт</button>
+    </div>
+<script >
+    let btn = document.getElementById("btn");
+    let h1 = document.getElementById("h1");
+    let h2 = document.getElementById("h2");
+    let inp = document.getElementById("inp");
+    let a 
+    let timer_id;
+    let b = 1
+    inp.oninput = function Rename() {
+        a = inp.value
+        h1.innerHTML = inp.value
+    }
+    btn.onclick = function StartClick() {
+    if (b) {
+        b = 0
+        timer_id = setInterval(Start , 1000)
+    } else {
+        h2.innerHTML = "Хватит нажимать на кнопку"
+    }
+    }
+    function Start() {
+        a -= 1
+        h1.innerHTML = a
+        if (a == 0) {
+            clearInterval(timer_id)
+            h1.innerHTML = "Введите число"
+            inp.value=""
+            b = 1
+        }
+    }
+</script>
+</body>
+</html>
