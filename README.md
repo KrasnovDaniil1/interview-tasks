@@ -30,3 +30,4 @@
 1) http://www.itmathrepetitor.ru/zadachi-po-javascript-iz-knigi-vyrazitelnyjj-javascript/
 2) https://medium.com/webbdev/js-2b0820b3788f
 3) https://proglib.io/p/tricky-challenges-js/
+4) https://telegra.ph/Testovoe-zadanie-04-07
