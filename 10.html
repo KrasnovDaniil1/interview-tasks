@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #437ede;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        form {
+            width: 100%;
+            max-width: 350px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+        }
+        h4 {
+            color: teal;
+            text-transform: uppercase;
+            margin-top: 60px;
+            font-size: 18px;
+        }
+        input {
+            padding: 10px;
+            font-size: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            background-color: teal;
+        }
+        input:hover {
+            outline: none;
+        }
+        button {
+            width: 180px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            background-color: teal;
+            border: none;
+            text-transform: uppercase;
+            height: 40px;
+            color: white;
+            font-size: 16px; 
+            letter-spacing: 1.5px;
+        }
+        button:hover {
+            background-color:#437ede ;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="javascript:postData()" >
+        <h4>Введите Email</h4>
+        <input type="email" id="input-email" value="sgfdgf" />
+        <h4>Введите пароль</h4>
+        <input type="password" id="input-password" />
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        let input_email = document.getElementById("input-email");
+        let input_password = document.getElementById("input-password");
+        let login = "example@site.com";
+        let password = "123456789";
+
+        window.onload = function() {
+
+            input_email.value = login;
+            input_password.value = password;
+            console.log()
+        }
+
+        function postData() {
+        
+            console.log("sfsd")
+
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: "post",
+                body: JSON.stringify({
+                        name: input_email.value,
+                        password: input_password.value
+                })
+                })
+                .then( (response) => { 
+                    alert("Данные успешно отправились на сервер")
+                })
+                .catch(() => 
+                    alert("Во время отправки произошла ошибка"));
+        }
+
+    </script>
+</body>
+</html>
